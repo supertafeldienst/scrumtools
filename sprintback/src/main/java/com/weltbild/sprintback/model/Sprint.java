@@ -6,7 +6,7 @@ import org.springframework.core.style.ToStringCreator;
 
 public class Sprint
 {
-	private long id;
+	private Long id;
 	private int number;
 	private String name;
 	private Team team;
@@ -16,7 +16,7 @@ public class Sprint
 		return id;
 	}
 
-	public void setId(long id)
+	public void setId(Long id)
 	{
 		this.id = id;
 	}
@@ -59,7 +59,6 @@ public class Sprint
 				.append(name)
 				.append(team)
 				.build();
-
 	}
 
 	@Override
@@ -73,9 +72,7 @@ public class Sprint
 		}
 
 		Sprint other = (Sprint) obj;
-		EqualsBuilder equalsBuilder = new EqualsBuilder();
-
-		return equalsBuilder
+		return new EqualsBuilder()
 				.append(this.number, other.number)
 				.append(this.name, other.name)
 				.append(this.team, other.team)

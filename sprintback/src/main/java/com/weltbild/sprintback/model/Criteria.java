@@ -1,13 +1,12 @@
 package com.weltbild.sprintback.model;
 
-import org.apache.catalina.webresources.TomcatURLStreamHandlerFactory;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.springframework.core.style.ToStringCreator;
 
 public class Criteria
 {
-	private long id;
+	private Long id;
 	private String name;
 	private int min;
 	private int max;
@@ -17,7 +16,7 @@ public class Criteria
 		return id;
 	}
 
-	public void setId(long id)
+	public void setId(Long id)
 	{
 		this.id = id;
 	}
